@@ -118,8 +118,8 @@ npm run dev
 
 ```js
 Object.defineProperty(data, 'count', {
-    get () {}, 
-    set () {}
+    get() {}, 
+    set() {}
 })
 ```
 - 存在问题：
@@ -136,15 +136,15 @@ Object.defineProperty(data, 'count', {
 ```js
 new Proxy(data, {
     // 拦截读取属性值
-    get (target, prop) {
+    get(target, prop) {
         return Reflect.get(target, prop)
     },
     // 拦截设置属性值或添加新属性
-    set (target, prop, value) {
+    set(target, prop, value) {
         return Reflect.set(target, prop, value)
     },
     // 拦截删除属性
-    deleteProperty (target, prop) {
+    deleteProperty(target, prop) {
         return Reflect.deleteProperty(target, prop)
     }
 })
