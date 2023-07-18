@@ -55,7 +55,7 @@ npm run serve
 ```
 
 ## 2. 使用vite创建
-官方文档：https://v3.cn.vuejs.org/guide/installation.html#vite
+官方文档：https://v3.cn.vuejs.org/guide/installation.html#vite<br>
 vite官网：https://vitejs.cn
 - 什么是vite？—— 新一代前端构建工具
 - 优势如下：
