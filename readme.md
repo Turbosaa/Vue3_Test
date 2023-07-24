@@ -217,8 +217,8 @@ watch([sum, msg], (newValue, oldValue) => {
 }, { immediate: true }) 
 
 // 情况三：监视reactive所定义的一个响应式数据的全部属性
-// 若watch监视的是reactive定义的响应式数据，则无法正确获得oldValue
-// 若watch监视的是reactive定义的响应式数据，则强制开启了深度监视 （deep配置无效）
+// 1. 注意：若watch监视的是reactive定义的响应式数据，则无法正确获得oldValue
+// 2. 注意：若watch监视的是reactive定义的响应式数据，则强制开启了深度监视 （deep配置无效）
 watch(person, (newValue, oldValue) => {
     console.log('person变化了', newValue, oldValue)
 }, { immediate: true, deep: false }) // 此处的deep配置无效
@@ -236,5 +236,5 @@ watch([() => person.name, () => person.age], (newValue, oldValue) => {
 // 特殊情况
 watch(() => person.job, (newValue, oldValue) => {
     console.log('person的job变化了', newValue, oldValue)
-}, { deep: true } ) // 此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
+}, { deep: true }) // 此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
 ```
