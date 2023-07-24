@@ -180,7 +180,7 @@ new Proxy(data, {
 ```js
 import { computed } from 'vue'
 
-setup(){
+setup() {
     ...
 // 计算属性——简写
     let fullName = computed(() => {
