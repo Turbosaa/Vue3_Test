@@ -43,7 +43,7 @@ export default {
         // }, { immediate: true })
 
         // 情况三：监视reactive所定义的一个响应式数据的全部属性
-        // 1. 注意：此处无法正确的获取oldValue
+        // 1. 注意：此处无法正确获得oldValue
         // 2. 注意：强制开启了深度监视（deep配置无效）
         // watch(person, (newValue, oldValue) => {
         //     console.log('person变化了', newValue, oldValue)
