@@ -236,5 +236,5 @@ watch([() => person.name, () => person.age], (newValue, oldValue) => {
 // 特殊情况
 watch(() => person.job, (newValue, oldValue) => {
     console.log('person的job变化了', newValue, oldValue)
-}, { deep: true }) // 此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
+}, { immediate: true, deep: true }) // 此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
 ```
