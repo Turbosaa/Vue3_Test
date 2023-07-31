@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { ref, reactive, watch } from 'vue'
+import { ref, watch } from 'vue'
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Demo',
@@ -22,7 +22,7 @@ export default {
         // 数据
         let sum = ref(0)
         let msg = ref('你好啊')
-        let person = reactive({
+        let person = ref({
             name: '张三',
             age: 18,
             job: {
