@@ -238,7 +238,7 @@ watch(() => person.job, (newValue, oldValue) => {
     console.log('person的job变化了', newValue, oldValue)
 }, { immediate: true, deep: true }) // 此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
 ```
-### 3.watchEffect函数
+### 3. watchEffect函数
 - watch的套路是：既要指明监视的属性，也要指明监视的回调
 - watchEffect的套路是：不用指明监视哪个属性，监视的回调中用到哪个属性，那就监视哪个属性
 - watchEffect有点像computed：
@@ -254,7 +254,7 @@ watchEffect(() => {
 })
 ```
 
-## 8.生命周期
+## 8. 生命周期
 - Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但其中有两个被改名：
     - ```beforeDestroy``` 改名为 ```beforeUnmount```
     - ```destroyed``` 改名为 ```unmounted```
@@ -267,3 +267,8 @@ watchEffect(() => {
     - `updated` ===> `onUpdated`
     - `beforeUnmount` ===> `onBeforeUnmount`
     - `unmounted` ===> `onUnmounted`
+
+## 9. 自定义hook函数
+- 什么是hook？—— 本质是一个函数，把setup函数中使用的Composition API进行了封装
+- 类似于vue2.x中的mixin
+- 自定义hook的优势: 复用代码, 让setup中的逻辑更清楚易懂
