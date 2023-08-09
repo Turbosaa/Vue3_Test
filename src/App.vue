@@ -1,28 +1,22 @@
 <template>
-    <div class="app">
-        <h3>我是App组件（祖），{{ name }}--{{ price }}W</h3>
-        <button @click="price++">修改price</button>
-        <Child />
-    </div>
+    <h3>我是App组件</h3>
 </template>
 
 <script>
-import { reactive, toRefs, provide } from 'vue'
-import Child from './components/Child.vue'
+// eslint-disable-next-line no-unused-vars
+import { ref, reactive, toRefs, readonly, isRef, isReactive, isReadonly, isProxy } from 'vue'
 export default {
     name: 'App',
-    components: { Child },
     setup() {
-        let car = reactive({ name: '奔驰', price: 40 })
-        provide('car', car) // 给自己的后代组件传递数据
-        return { ...toRefs(car) }
+        let car1 = reactive({ name: '奔驰', price: '40W' })
+        let sum = ref(0)
+        let car2 = readonly(car1)
+
+        console.log(isRef(sum))
+        console.log(isReactive(car1))
+        console.log(isReadonly(car2))
+        console.log(isProxy(car1))
+        console.log(isProxy(sum))
     }
 }
 </script>
-
-<style>
-.app {
-    background-color: gray;
-    padding: 10px;
-}
-</style>
