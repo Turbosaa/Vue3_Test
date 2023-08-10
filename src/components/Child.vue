@@ -1,16 +1,25 @@
 <template>
     <div class="child">
         <h3>我是Child组件</h3>
-        <Son />
+        {{ sum }}
     </div>
 </template>
 
 <script>
-import Son from './Son'
+import { ref } from 'vue'
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Child',
-    components: { Son }
+    async setup() {
+        let sum = ref(0)
+        // eslint-disable-next-line no-unused-vars
+        let p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ sum })
+            }, 3000)
+        })
+        return await p
+    }
 }
 </script>
 
