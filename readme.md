@@ -402,3 +402,26 @@ export default {
 <div style="width:430px;height:340px;overflow:hidden">
     <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image"style="height:360px"/>
 </div>
+
+
+
+# 五、新的组件
+
+## 1. Fragment
+- 在Vue2中: 组件必须有一个根标签
+- 在Vue3中: 组件可以没有根标签, 内部会将多个标签包含在一个Fragment虚拟元素中
+- 好处: 减少标签层级, 减小内存占用
+
+## 2.Teleport
+- 什么是Teleport？—— `Teleport` 是一种能够将我们的<strong style="color:#DD5145">组件html结构</strong>移动到指定位置的技术
+
+```vue
+<teleport to="移动位置">
+    <div v-if="isShow" class="mask">
+        <div class="dialog">
+            <h3>我是一个弹窗</h3>
+            <button @click="isShow = false">关闭弹窗</button>
+        </div>
+    </div>
+</teleport>
+```
