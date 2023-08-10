@@ -4,7 +4,7 @@
 
 <script>
 // eslint-disable-next-line no-unused-vars
-import { ref, reactive, toRefs, readonly, isRef, isReactive, isReadonly, isProxy } from 'vue'
+import { ref, reactive, readonly, isRef, isReactive, isReadonly, isProxy } from 'vue'
 export default {
     name: 'App',
     setup() {

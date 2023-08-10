@@ -380,3 +380,25 @@ export default {
 - isReactive：检查一个对象是否是由`reactive`创建的响应式代理
 - isReadonly：检查一个对象是否是由`readonly`创建的只读代理
 - isProxy：检查一个对象是否是由`reactive`或者`readonly`方法创建的代理
+
+
+
+# 四、Composition API的优势
+
+## 1. Options API存在的问题
+使用传统Options API中，新增或者修改一个需求，就需要分别在data，methods，computed里修改
+<div style="width:600px;height:370px;overflow:hidden;float:left;margin-right:30px">
+    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84e4e2c02424d9a99862ade0a2e4114~tplv-k3u1fbpfcp-watermark.image" style="width:600px;float:left" />
+</div>
+<div style="width:300px;height:370px;overflow:hidden">
+    <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image" style="width:560px;zoom:50%" />
+</div>
+
+## 2. Composition API的优势
+可以更加优雅的组织我们的代码，函数，让相关功能的代码更加有序的组织在一起
+<div style="width:500px;height:340px;overflow:hidden;float:left;margin-right:30px">
+    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc0be8211fc54b6c941c036791ba4efe~tplv-k3u1fbpfcp-watermark.image"style="height:360px;float:left"/>
+</div>
+<div style="width:430px;height:340px;overflow:hidden">
+    <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image"style="height:360px"/>
+</div>
